@@ -1,273 +1,286 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Portfolio - Christian Sidebang</title>
+  <link rel="icon" href="favicon.ico">
 
-    <!-- Popper.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap JavaScript --> 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <!-- my CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <title>Portofolio Christian Sidebang</title>
-  </head>
+<body>
 
-  <body style="background-color: blanchedalmond;">
+<!-- CURSOR EFFECT -->
+<div class="cursor"></div>
+<div class="cursor-blur"></div>
 
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand text-warning" href="#profil"><img src="img/Logo.png" width="30" height="30"> Christian Sidebang </a>
-        <button class="navbar-toggler btn btn-warning" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon text-warning"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="#portfolio">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-warning" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Christian Sidebang</a>
 
-    <!-- sidenav -->
-    <ul class="sidenav" id="mobile-nav">
-      <li><a href="#portfolio">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNav">
+      ☰
+    </button>
 
-    <!-- slider -->
-    <div class="slider" id="portfolio">
-      <ul class="slides">
-        <li>
-          <img src="img/slider/HDI.png">
-          <div class="caption left-align">
-            <h3>My Portfolios</h3>
-            <h5 class="light grey-text text-lighten-3">Creating PT.HDI Adi Raharja employee website using, PHP, HTML, CSS, Java Script, Bootstrap.</h5>
-          </div>
-        </li>
-        <li>
-          <img src="img/slider/Recruitmen-Tracking.png">
-          <div class="caption right-align">
-            <h3>My Portfolios</h3>
-            <h5 class="light grey-text text-lighten-3">Updating Formulatrix recruitment tracking website, as a project of Formulatrix Software Engineering Bootcamp team. </h5>
-          </div>
-        </li>
-        <li>
-          <img src="img/slider/Indofood.png">
-          <div class="caption center-align">
-            <h3>My Portfolios</h3>
-            <h5 class="light grey-text text-lighten-3">Create a simple Indofood employee data website using, PHP, HTML, CSS, Java Script, Bootstrap.</h5>
-          </div>
-        </li>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
+  </div>
+</nav>
 
-    <!-- Porofil -->
-    <div class="parallax-container" id="profil">
-      <div class="parallax" href="#about"><img src="img/Background2.png"></div>
-      <div class="container">
-        <div class="parallax" href="#about"><img src="img/Background2.png"></div>
-        <div class="text-center">
-          <img src="img/profil.png" class="rounded-circle img-thumbnail" width="150" height="100">
-          <h1 class="display-5">Christian Sidebang</h1>
-          <h3 class="lead"><b>Software engineering</b></h3>
-          <h4 class="lead"><b>csidebang02@gmail.com</b></h4>
-          <a href="img\CV-CHRISTIAN SIDEBANG.pdf" download class="btn btn-primary btn btn-warning"><b class="bi bi-cloud-arrow-down">Download CV</b></a>
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+  <div class="container text-center" data-aos="fade-up">
+
+    <img src="assets/img/profile/ProfilNew.jpg" class="profile-img mb-4">
+
+    <h1>Hello, I'm <span>Christian Sidebang</span></h1>
+
+    <p class="lead">
+      <span id="typing"></span>
+    </p>
+
+    <div class="mt-2">
+      <span class="badge-custom">Open to Work</span>
+    </div>
+
+    <div class="mt-4">
+      <a href="assets/cv/CV-Christian-Sidebang.pdf" target="_blank" class="btn btn-warning mr-2">
+        📄 View CV
+      </a>
+
+      <a href="assets/cv/CV-Christian-Sidebang.pdf" download class="btn btn-outline-warning">
+        ⬇ Download CV
+      </a>
+    </div>
+
+    <a href="#portfolio" class="btn btn-warning mt-4">See My Work</a>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">About Me</h2>
+
+    <div class="row">
+      <div class="col-md-6" data-aos="fade-right">
+        <p>
+          I am very enthusiastic about majoring in Informatics in mastering and learning intermediate level programming languages. I enjoy challenges and being involved in projects that require me to work within and beyond my comfort and knowledge. For me learning new languages and development techniques is important for me and the success of the organization.
+        </p>
+      </div>
+
+      <div class="col-md-6" data-aos="fade-left">
+        <p>C#</p>
+        <div class="progress mb-3">
+          <div class="progress-bar" style="width:80%"></div>
+        </div>
+
+        <p>JavaScript</p>
+        <div class="progress mb-3">
+          <div class="progress-bar" style="width:75%"></div>
+        </div>
+
+        <p>PHP | HTML | CSS</p>
+        <div class="progress mb-3">
+          <div class="progress-bar" style="width:85%"></div>
+        </div>
+
+        <p>ASP.NET Core</p>
+        <div class="progress mb-3">
+          <div class="progress-bar" style="width:80%"></div>
+        </div>
+
+        <p>Vue.JS</p>
+        <div class="progress mb-3">
+          <div class="progress-bar" style="width:70%"></div>
+        </div>
+
+        <p>SQL Server | PostgreSQL</p>
+        <div class="progress mb-3">
+          <div class="progress-bar" style="width:80%"></div>
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- About Us -->
-    <section id="about" class="about">
-      <div class="container">
-        <div class="row ">
-          <h3 class="col text-center">About</h3>
-        </div>
-        <div class="row">
-          <div class="col m6 light">
-            <h5>My Professionals Skill</h5>
-            <p>I graduated with a bachelor's degree in informatics from Diponegoro University. 
-              Have experience in developing database, data Analyst,
-              and website, one of which is a web information system that manages employee data.
-              Served as IT web Developer during my college internship at PT HDI Adi Raharja.
-            </p>
-          </div>
-        <div class="row">
-          <div class="col m6 light">
-            <p>C#</p>
-            <div class="progress">
-                <div class="determinate blue" style="width: 60%"></div>
-            </div>
-            <p>PHP|CSS|HTML</p>
-            <div class="progress">
-                <div class="determinate blue" style="width: 85%"></div>
-            </div>
-            <p>Java Script</p>
-            <div class="progress">
-                <div class="determinate blue" style="width: 75%"></div>
-            </div>
-          </div>
-          <div class="col m6 light">
-            <p>MySQL|SQL</p>
-            <div class="progress">
-                <div class="determinate blue" style="width: 85%"></div>
-            </div>
-            <p>Android</p>
-            <div class="progress">
-                <div class="determinate blue" style="width: 60%"></div>
-            </div>
-            <p>Data Analyst</p>
-            <div class="progress">
-                <div class="determinate blue" style="width: 75%"></div>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
+<!-- ================= PORTFOLIO ================= -->
+<section id="portfolio">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">My Projects</h2>
 
-    <!-- Contact -->
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="row pt-4 mb-4">
-          <div class="col text-center">
-            <h3>Contact</h3>
-          </div>
-        </div>
+    <div class="row">
 
-        <div class="row justify-content-center">
-          <div class="col-lg-4">
-            <div class="card bg-primary text-white mb-4 text-center">
-              <div class="card-body">
-                <h5 class="card-title">Contact Me</h5>
-                <p class="card-text"></p>
-              </div>
-            </div>
-            
-            <ul class="list-group mb-4">
-              <li class="list-group-item"><h3>Location</h3></li>
-              <li class="list-group-item">My Address</Address></li>
-              <li class="list-group-item">Jl. Portasari I, Barak Jengki No.04, Semarang (Asrama Yonif Raider/400)</li>
-              <li class="list-group-item">Central Java, Indonesia</li>
-            </ul>
-          </div>
-
-          <!-- <div class="col-lg-6"> -->
-            
-            <!-- <form>
-              <div class="form-group">
-                <label for="nama">Name</label>
-                <input type="text" class="form-control" id="nama">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" class="form-control" id="email">
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="text" class="form-control" id="phone">
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
-              </div>
-              <div class="form-group">
-                <button type="button" class="btn btn-warning">Send Message</button>
-              </div>
-            </form> -->
-
+      <div class="col-md-4 mb-4" data-aos="zoom-in">
+        <div class="card">
+          <img src="assets/img/project/HDI.png">
+          <div class="card-body">
+            <h5>Employee System</h5>
+            <p>Web system for managing employee data using PHP and MySQL.</p>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Sosial Media -->
-    <div class="parallax-container" id="Accound">
-      <div class="parallax" href="#about"><img src="img/Background1.png"></div>
-      <div class="container">
-        <h3 class="center light dark-text" style="color: rgb(39, 39, 39); font-weight: bold;">Account Links</h3>
-        <div class="row">
-          <div class="col center">
-            <a href="https://github.com/csidebang02" target="_blank"><img src="img/icon/github.png" width="30" height="30"></a>
+      <div class="col-md-4 mb-4" data-aos="zoom-in">
+        <div class="card">
+          <img src="assets/img/project/Recruitmen-Tracking.png">
+          <div class="card-body">
+            <h5>Recruitment System</h5>
+            <p>System for tracking recruitment process and applicants.</p>
           </div>
-          <div class="col center">
-            <a href="https://twitter.com/christiansideb1" target="_blank"><img src="img/icon/twitter.png" width="30" height="30"></a>  
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4" data-aos="zoom-in">
+        <div class="card">
+          <img src="assets/img/project/Indofood.png">
+          <div class="card-body">
+            <h5>Employee Data</h5>
+            <p>Simple web-based employee data management system.</p>
           </div>
-          <div class="col center">
-            <a href="https://web.facebook.com/christian.sidebang/" target="_blank"><img src="img/icon/facebook.png" width="30" height="30"></a>
+        </div>
+      </div>
+
+      <!-- <div class="col-md-4 mb-4" data-aos="zoom-in">
+        <div class="card">
+          <img src="assets/img/project/Item Lab - Silaom.png">
+          <div class="card-body">
+            <h5>Item Lab</h5>
+            <p>Simple web-based item lab data management system.</p>
           </div>
-          <div class="col center">
-            <a href="https://www.instagram.com/christiansidebang/" target="_blank"><img src="img/icon/instagram.png" width="30" height="30"></a>
+        </div>
+      </div> -->
+
+      <div class="col-md-4 mb-4" data-aos="zoom-in">
+        <div class="card">
+          <img src="assets/img/project/Smart Material Store - Bungasari.png">
+          <div class="card-body">
+            <h5>Smart Material Store</h5>
+            <p>Inventory management system.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4" data-aos="zoom-in">
+        <div class="card">
+          <img src="assets/img/project/Akebono Web Preventive.png">
+          <div class="card-body">
+            <h5>Preventive (CMMS)</h5>
+            <p>Maintenance management system.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Contact</h2>
+
+    <div class="row justify-content-center">
+      <div class="col-md-5" data-aos="zoom-in">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5>Location</h5>
+            <p>Jl. Dr Susilo 2E No.105, Grogol, Grogol Petamburan, Jaarta Barat, DKI Jakarta<br>Indonesia</p>
+            <p>Email: csidebang02@gmail.com</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ================= SOCIAL ================= -->
+<section class="text-center py-4 social">
+  <a href="https://github.com/csidebang02" target="_blank">Github</a>
+  <a href="https://twitter.com/christiansideb1" target="_blank">Twitter</a>
+  <a href="https://instagram.com/christiansidebang" target="_blank">Instagram</a>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="text-center text-warning">
+  <p>&copy; 2026 Christian Sidebang</p>
+</footer>
+
+<!-- ================= JS ================= -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+<!-- CURSOR EFFECT -->
+<script>
+  document.addEventListener("mousemove", function(e) {
+    const cursor = document.querySelector(".cursor");
+    const blur = document.querySelector(".cursor-blur");
+
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+
+    blur.style.left = e.clientX + "px";
+    blur.style.top = e.clientY + "px";
+  });
+</script>
+
+<script>
+  const text = [".Net Developer", "Full Stack Developer", "Data Analyst"];
+  let i = 0;
+  let j = 0;
+  let currentText = "";
+  let isDeleting = false;
+
+  function type() {
+    currentText = text[i];
     
-    <!-- footer -->
-    <footer class="bg-dark text-warning mt-auto">
-      <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <p>&copy; Christian Sidebang | 2023</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script>
-      const sideNav = document.querySelectorAll('.sidenav');
-      M.Sidenav.init(sideNav);
+    if (isDeleting) {
+      document.getElementById("typing").innerHTML = currentText.substring(0, j--);
+    } else {
+      document.getElementById("typing").innerHTML = currentText.substring(0, j++);
+    }
 
-      const slider = document.querySelectorAll('.slider');
-      M.Slider.init(slider, {
-        indicators: false,
-        height: 500,
-        transition: 600,
-        interval: 3000
-      });
+    if (!isDeleting && j === currentText.length) {
+      isDeleting = true;
+      setTimeout(type, 1000);
+    } else if (isDeleting && j === 0) {
+      isDeleting = false;
+      i = (i + 1) % text.length;
+      setTimeout(type, 300);
+    } else {
+      setTimeout(type, isDeleting ? 50 : 100);
+    }
+  }
 
-      const parallax = document.querySelectorAll('.parallax');
-      M.Parallax.init(parallax);
-
-    </script>
-  </body>
+  type();
+</script>
+</body>
 </html>
-
-
-
-
-
-
-
